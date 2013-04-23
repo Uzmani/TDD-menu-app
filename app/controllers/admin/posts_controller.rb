@@ -1,6 +1,4 @@
 class Admin::PostsController < ApplicationController
-  #http_basic_authenticate_with :name => "geek", :password => "jock"
-
   def index
     @posts = Post.all
   end
@@ -32,7 +30,7 @@ class Admin::PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     if @post.update_attributes(params[:post])
-      redirect_to admin_posts_url
+      redirect_to admin_post_url(@post)
     else
       render :edit
     end
