@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  database: dbc_rspec_rails_development
+  host: localhost
+  encoding: UTF8
+  min_messages: WARNING
+
+test: &test
+  adapter: postgresql
+  database: dbc_rspec_rails_test
+  host: localhost
+  encoding: UTF8
+  min_messages: WARNING
+
+production:
+  adapter: sqlite3
+  database: db/production.sqlite3
+  pool: 5
+  timeout: 5000

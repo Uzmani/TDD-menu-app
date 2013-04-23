@@ -1,0 +1,12 @@
+<H1>Welcome to my blog!</h1>
+
+<%= link_to "View All Posts", posts_url %>
+
+<% if @recent_posts.any? %>
+  <h4>Recent Posts:</h4>
+
+  <% @recent_posts.each do |post| %>
+    <%= link_to post.title, post_url(post) %>
+    <br>
+  <% end %>
+<% end %>
