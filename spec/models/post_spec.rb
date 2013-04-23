@@ -13,6 +13,7 @@ describe Post do
     post = Post.new
     post.title   = "New post!"
     post.content = "A great story"
+    post.slug.should be_nil
     post.save
 
     post.slug.should eq "new-post"
