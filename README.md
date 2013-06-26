@@ -5,12 +5,12 @@ In this challenge you will begin by git cloning an existing Rails application. M
 The objectives of this challenge are to:
 
 
-1. Fix the Rails application so that the existing tests pass
+1. Fix the Rails application so that the existing tests pass. Begin with model unit tests, then the controller unit tests, then integration tests.
 
 2. Implement the tests marked as pending
 
 ###RULES
 
-1. You are not allowed to edit existing view files (you ARE allowed to create new ones)
+1. You are not allowed to edit existing views  (you ARE allowed to create new ones)
 
 2. You are not allowed to modify existing tests, except when removing ```pending``` to complete the implementation
