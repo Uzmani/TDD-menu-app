@@ -14,3 +14,10 @@ The objectives of this challenge are to:
 1. You are not allowed to edit existing views  (you ARE allowed to create new ones)
 
 2. You are not allowed to modify existing tests, except when removing ```pending``` to complete the implementation
+
+###Resources
+
+The following screencasts are HIGHLY recommended:
+
+- http://railscasts.com/episodes/257-request-specs-and-capybara
+- http://railscasts.com/episodes/275-how-i-test
