@@ -1,10 +1,13 @@
 require 'spec_helper'
 
-describe 'Admin' do
+feature 'Admin panel' do
   context "on admin homepage" do
     it "can see a list of recent posts"
+
     it "can edit a post by clicking the edit link next to a post"
+
     it "can delete a post by clicking the delete link next to a post"
+
     it "can create a new post and view it" do
        visit new_admin_post_url
 
@@ -30,7 +33,9 @@ describe 'Admin' do
 
   context "on post show page" do
     it "can visit a post show page by clicking the title"
+
     it "can see an edit link that takes you to the edit post path"
+
     it "can go to the admin homepage by clicking the Admin welcome page link"
   end
 end

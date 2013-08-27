@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'User' do
+feature 'User browsing the website' do
   context "on homepage" do
     it "sees a list of recent posts titles" do
       pending
@@ -8,6 +8,7 @@ describe 'User' do
       # user visits the homepage
       # user can see the posts titles
     end
+
     it "can click on titles of recent posts and should be on the post show page" do
       pending
       # given a user and a list of posts
