@@ -2,8 +2,12 @@ require 'spec_helper'
 
 feature 'Admin panel' do
   context "on admin homepage" do
-    it "can see a list of recent posts"
+    let!(:post) { Post.create(title: "best search engine", content: "google is the best") }
+    it "can see a list of recent posts" do
 
+      visit admin_posts_url
+      expect(page).to have_content post.title
+    end
     it "can edit a post by clicking the edit link next to a post"
 
     it "can delete a post by clicking the delete link next to a post"
@@ -16,6 +20,7 @@ feature 'Admin panel' do
          fill_in 'post_content', with: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
          page.check('post_is_published')
          click_button "Save"
+         save_and_open_page
        }.to change(Post, :count).by(1)
 
        page.should have_content "Published: true"

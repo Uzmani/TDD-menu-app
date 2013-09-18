@@ -1,9 +1,14 @@
 require 'spec_helper'
 
 feature 'User browsing the website' do
+
   context "on homepage" do
+
+    let(:post) { Post.create(title: "best search engine", content: "google is the best") }
+
     it "sees a list of recent posts titles" do
-      pending
+      visit root
+      expect(page).to have_content("Best Search Engine")
       # given a user and a list of posts
       # user visits the homepage
       # user can see the posts titles

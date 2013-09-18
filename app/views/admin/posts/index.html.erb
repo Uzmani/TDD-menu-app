@@ -1,7 +1,8 @@
 <h1>Welcome to the admin panel!</h1>
 
 <%= link_to "New Post", new_admin_post_url %>
-
+<br>
+<%= @posts.first.title %>
 <% if @posts.any? %>
   <h4>All posts:</h4>
   <table>
